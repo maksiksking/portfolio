@@ -20,17 +20,14 @@ body {
     width: 10px;
 }
 
-/* Track */
 ::-webkit-scrollbar-track {
     background: #f1f1f1;
 }
 
-/* Handle */
 ::-webkit-scrollbar-thumb {
     background: #888;
 }
 
-/* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
     background: #555;
 }
@@ -48,4 +45,54 @@ body {
 
 .bastardOne {
     display: none;
+}
+
+.tv1 {
+    position: absolute;
+    left: 12.8vw;
+    top: 111vh;
+    /*background-color: rgba(16, 16, 16, 80);*/
+    /*background-image:  repeating-radial-gradient( circle at 0 0, transparent 0, #101010 16px ), repeating-linear-gradient( #00000055, #000000 );*/
+}
+
+.carcass1 {
+    width: 60vw;
+    height: 68vh;
+    z-index: 20;
+}
+
+.leftOne {
+    background-image: url("gallery/mainimg2.webp");
+    background-position: 0;
+    background-repeat: no-repeat;
+    background-size: 28vw;
+    overflow: clip;
+    margin-top: -66vh;
+    margin-left: 2.7vw;
+    width: 27.8vw;
+    height: 66vh;
+    border-radius: 80px;
+    animation: moovinUp 10s alternate infinite;
+}
+
+.rightOne {
+    background-image: url("gallery/mainimg.webp");
+    background-position: 0;
+    background-repeat: no-repeat;
+    background-size: 27vw;
+    margin-top: -67vh;
+    margin-left: 30vw;
+    width: 27.8vw;
+    height: 66vh;
+    border-radius: 80px;
+    animation: moovinUp 10s alternate infinite;
+}
+
+@keyframes moovinUp {
+    0% {
+        background-position: 0;
+    }
+    100% {
+        background-position: 0 1.7vh;
+    }
 }
