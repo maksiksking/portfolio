@@ -47,45 +47,57 @@ body {
     display: none;
 }
 
+/*Web dev blob*/
+
 .tv1 {
+    display: flex;
+    justify-content: start;
+    width: 57.2vw;
+    height: 68vh;
     position: absolute;
-    left: 12.8vw;
     top: 111vh;
-    /*background-color: rgba(16, 16, 16, 80);*/
-    /*background-image:  repeating-radial-gradient( circle at 0 0, transparent 0, #101010 16px ), repeating-linear-gradient( #00000055, #000000 );*/
+    left: 14vw;
+    z-index: 50;
 }
 
 .carcass1 {
-    width: 60vw;
-    height: 68vh;
-    z-index: 20;
+    pointer-events: none;
+    position: absolute;
+    width: 57.2vw;
+    z-index: 49;
 }
 
 .leftOne {
-    background-image: url("gallery/mainimg2.webp");
-    background-position: 0;
+    background-image: url("gallery/mainimg.webp");
+    background-color: #343434;
     background-repeat: no-repeat;
-    background-size: 28vw;
-    overflow: clip;
-    margin-top: -66vh;
-    margin-left: 2.7vw;
-    width: 27.8vw;
-    height: 66vh;
-    border-radius: 80px;
-    animation: moovinUp 10s alternate infinite;
+    background-size: cover;
+    width: 50%;
+    border-radius: 0 11% 11% 0;
+    animation: moovinUp 10s alternate infinite none;
+    cursor: pointer;
 }
 
 .rightOne {
-    background-image: url("gallery/mainimg.webp");
-    background-position: 0;
+    background-image: url("gallery/mainimg2.webp");
+    background-color: #343434;
     background-repeat: no-repeat;
-    background-size: 27vw;
-    margin-top: -67vh;
-    margin-left: 30vw;
-    width: 27.8vw;
-    height: 66vh;
-    border-radius: 80px;
-    animation: moovinUp 10s alternate infinite;
+    width: 50%;
+    background-size: cover;
+    border-radius: 11% 0 0 11%;
+    animation: moovinUp 10s alternate-reverse infinite none;
+    background-clip: border-box;
+    cursor: pointer;
+}
+
+.leftOne:hover {
+    animation-play-state: paused;
+    filter: brightness(85%);
+}
+
+.rightOne:hover {
+    animation-play-state: paused;
+    filter: brightness(85%);
 }
 
 @keyframes moovinUp {
@@ -94,5 +106,123 @@ body {
     }
     100% {
         background-position: 0 1.7vh;
+    }
+}
+
+/*Coding blob*/
+
+.tv2 {
+    display: flex;
+    justify-content: start;
+    width: 57.2vw;
+    height: 68vh;
+    position: absolute;
+    top: 211vh;
+    left: 35vw;
+    z-index: 50;
+}
+
+.carcass2 {
+    position: absolute;
+    width: 57.2vw;
+    z-index: 50;
+    pointer-events: none;
+}
+
+.leftCoding {
+    background-color: #343434;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 70%;
+    border-radius: 11%;
+    z-index: 48;
+    cursor: pointer;
+}
+
+.pancakeTop {
+    position: absolute;
+    background-image: url("gallery/icecubeapp.webp");
+    /*background-color: #343434;*/
+    background-repeat: no-repeat;
+    background-size: 96%;
+    width: 70%;
+    height: 100%;
+    top: 5%;
+    left: 2.7%;
+    border-radius: 11% 0 0 11%;
+    z-index: 3;
+}
+
+.pancakeMiddle {
+    position: absolute;
+    background-image: url("gallery/snow.webp");
+    /*background-color: #343434;*/
+    background-repeat: no-repeat;
+    width: 70%;
+    border-radius: 11% 0 0 11%;
+    animation: moovinDiagonally 60s linear infinite;
+    z-index: 2;
+}
+
+.pancakeBottom {
+    position: absolute;
+    background-image: url("gallery/ikubbg.webp");
+    /*background-color: #343434;*/
+    background-repeat: no-repeat;
+    width: 70%;
+    height: 100%;
+    background-size: cover;
+    border-radius: 11% 0 0 11%;
+    cursor: pointer;
+    z-index: 1;
+}
+
+.leftCoding:hover .pancakeBottom {
+    filter: brightness(85%);
+}
+
+.leftCoding:hover .pancakeMiddle {
+    animation-play-state: paused;
+    filter: brightness(85%);
+}
+
+.leftCoding:hover .pancakeTop {
+    filter: brightness(85%);
+}
+
+.github:hover {
+    filter: brightness(85%);
+}
+
+.coding {
+    position: absolute;
+    background-image: url("gallery/coding.webp");
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 100%;
+    height: 100%;
+    left: 2%;
+    z-index: 49;
+    pointer-events: none;
+}
+
+.github {
+    position: absolute;
+    background-image: url("gallery/github.webp");
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 97%;
+    height: 100%;
+    border-radius: 0 11% 11% 0;
+    cursor: pointer;
+    margin-left: 0.3%;
+}
+
+@keyframes moovinDiagonally {
+    from {
+        background-position: 0 0;
+    }
+    to {
+        background-position: 85% 85%;
     }
 }
