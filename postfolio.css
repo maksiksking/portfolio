@@ -455,15 +455,15 @@ body {
     background-color: rgba(0,0,0,0.7);
 }
 
-.modalImg {
-    max-width: 90%;
-    max-height: 90%;
-    min-width: 10%;
-    position: fixed;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%);
-}
+/*.modalImg {*/
+/*    max-width: 90%;*/
+/*    max-height: 90%;*/
+/*    min-width: 10%;*/
+/*    position: fixed;*/
+/*    left: 50%;*/
+/*    top: 50%;*/
+/*    transform: translate(-50%, -50%);*/
+/*}*/
 
 .modalImgPix {
     display: none;
