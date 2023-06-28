@@ -122,7 +122,7 @@ document.addEventListener("DOMContentLoaded", function () {
         timeout = setTimeout(function(){
             audioWind.muted = false;
             // window.alert("yeah")
-        }, 20000);
+        }, 2000);
         if (audioWind.muted === false) {
             audioWind.muted = true;
         }
