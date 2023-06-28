@@ -116,15 +116,15 @@ document.addEventListener("DOMContentLoaded", function () {
 
     const audioWind = document.getElementById("player");
 
-    let timeout;
-    document.onmousemove = function(){
-        clearTimeout(timeout);
-        timeout = setTimeout(function(){
-            audioWind.muted = false;
-            window.alert("yeah")
-        }, 2000);
-        if (audioWind.muted === false) {
-            audioWind.muted = true;
-        }
-    }
+    // let timeout;
+    // document.onmousemove = function(){
+    //    clearTimeout(timeout);
+    //    timeout = setTimeout(function(){
+    //        audioWind.muted = false;
+    //        window.alert("yeah")
+    //    }, 2000);
+    //    if (audioWind.muted === false) {
+    //        audioWind.muted = true;
+    //    }
+    //}
 });
