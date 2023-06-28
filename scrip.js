@@ -118,13 +118,12 @@ document.addEventListener("DOMContentLoaded", function () {
 
     // let timeout;
     // document.onmousemove = function(){
-    //    clearTimeout(timeout);
-    //    timeout = setTimeout(function(){
-    //        audioWind.muted = false;
-    //        window.alert("yeah")
-    //    }, 2000);
-    //    if (audioWind.muted === false) {
-    //        audioWind.muted = true;
-    //    }
-    //}
+    //     clearTimeout(timeout);
+    //     timeout = setTimeout(function(){
+    //         audioWind.muted = false;
+    //     }, 2000);
+    //     if (audioWind.muted === false) {
+    //         audioWind.muted = true;
+    //     }
+    // }
 });
