@@ -51,18 +51,14 @@ document.addEventListener("DOMContentLoaded", function () {
         pancakeBottom.style.height = carcassHeight2 + "px";
 
         gallery.style.height = carcassHeight2 + "px";
-        console.log(blankReal + "aaa");
-        console.log(document.getElementById("blankReal") + "aaaa");
     }
 
     window.addEventListener('load', carcassify123)
     addEventListener("resize", carcassify123);
 
     function modalAppear(evt) {
-        console.log(blankReal + "aa")
-        if (evt.target === folderBg  || evt.target === folderBgPix || evt.target === designBg || evt.target === designBgPix
+        if (evt.target === folderBg || evt.target === folderBgPix || evt.target === designBg || evt.target === designBgPix
             || evt.target === designBgAI || evt.target === folderBgAI || evt.target === blankReal || evt.target === blankReal1 || evt.target === designTxt) {
-            console.log(blankReal + "a")
             return
         }
         if (evt.target === leftFolder) {
@@ -114,16 +110,48 @@ document.addEventListener("DOMContentLoaded", function () {
     gallery.addEventListener("click", modalAppear, false);
     modal.addEventListener("click", poof);
 
-    const audioWind = document.getElementById("player");
+    const yesAnsw = document.getElementById("yesAnsw");
+    const noAnsw = document.getElementById("noAnsw");
+    const modal2 = document.getElementById("modal2")
+    const popUp = document.getElementById("popUp")
+    const audioWind = new Audio("audio/yoinked.mp3");
 
-    let timeout;
-    document.onmousemove = function(){
-        clearTimeout(timeout);
-        timeout = setTimeout(function(){
-            audioWind.muted = false;
-        }, 2000);
-        if (audioWind.muted === false) {
-            audioWind.muted = true;
-        }
+    let onOffAudioReal = localStorage["onOffAudio"];
+    console.log(onOffAudioReal)
+
+    if (onOffAudioReal === "true") {
+        console.log("real")
     }
+
+    if (onOffAudioReal === "true") {
+        audioWind.play()
+        modal2.style.display = "none";
+        popUp.style.display = "none";
+        console.log("megastonk")
+    }
+    if (onOffAudioReal === "false") {
+        modal2.style.display = "none";
+        popUp.style.display = "none";
+        console.log("Audio turned off automatically (you can turn it on in the bottom)")
+    }
+
+    audioWind.volume = 0.2;
+
+    function closeYesEnable() {
+        localStorage["onOffAudio"] = "true";
+
+        audioWind.play()
+        modal2.style.display = "none";
+        popUp.style.display = "none";
+        console.log(audioWind.muted)
+    }
+
+    function closeNo() {
+        localStorage["onOffAudio"] = "false";
+        modal2.style.display = "none";
+        popUp.style.display = "none";
+    }
+
+    yesAnsw.addEventListener("click", closeYesEnable)
+    noAnsw.addEventListener("click", closeNo)
 });
